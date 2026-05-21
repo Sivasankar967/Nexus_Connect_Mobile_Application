@@ -17,18 +17,70 @@ On the login screen, tap **Demo credentials — tap to fill**, then **Sign In**.
 
 ---
 
-## Install the app (Android APK)
+## Download the app
 
-1. Open **`releases/NexusConnect.apk`** (included in this repo).
-2. Copy to an Android phone and open the file.
-3. Tap **Install** (allow unknown apps if prompted).
-4. Open **NexusConnect** and sign in with the credentials above.
+### Option 1 — From GitHub (recommended)
 
-| Detail | Value |
-|--------|--------|
-| Version | 1.0.0 |
-| Platform | Android only |
-| Expo Go required | No |
+1. Open the repository:  
+   https://github.com/Sivasankar967/Nexus_Connect_Mobile_Application
+
+2. Go to the **`releases`** folder:  
+   https://github.com/Sivasankar967/Nexus_Connect_Mobile_Application/tree/main/releases
+
+3. Click **`NexusConnect.apk`** → click the **Download** button (top right on the file page).
+
+4. Copy the APK to your Android phone, open it, and tap **Install**.
+
+**Direct download link:**  
+https://github.com/Sivasankar967/Nexus_Connect_Mobile_Application/raw/main/releases/NexusConnect.apk
+
+### Option 2 — From Expo (online install)
+
+1. Open this link **on your Android phone** (Chrome):  
+   https://expo.dev/accounts/sivasanka30/projects/nexusconnect/builds/40a6b297-ce02-469b-bc7d-ecd02de27d2b
+
+2. Tap **Install** and follow the prompts.
+
+---
+
+## App details
+
+| Item | Details |
+|------|---------|
+| **App name** | NexusConnect |
+| **Version** | 1.0.0 (build 1) |
+| **Platform** | Android only |
+| **Package ID** | `com.nexus.connect` |
+| **APK file** | `releases/NexusConnect.apk` (~79 MB) |
+| **Build type** | EAS preview (internal distribution) |
+| **Expo SDK** | 52 |
+| **Internet required** | No (offline demo data) |
+| **Expo Go required** | No |
+
+### How to check details on your phone (after install)
+
+1. Open **NexusConnect** and sign in.
+2. Go to the **More** tab (bottom right) to see your profile, XP, badges, and role.
+3. On the device: **Settings → Apps → NexusConnect** to see app version and storage info.
+
+### What’s inside the app
+
+| Tab | What you can do |
+|-----|------------------|
+| **Home** | Leadership message, XP, announcements, events, notifications (bell) |
+| **People** | Search and view employee profiles |
+| **Recognition** | View and post colleague appreciation |
+| **More** | Your stats, badges, quick links, logout |
+
+---
+
+## Install steps (Android)
+
+1. Download **`NexusConnect.apk`** (see above).
+2. Open the file on your phone → tap **Install**.
+3. If Android asks, allow **Install unknown apps** for your browser or Files app.
+4. Open **NexusConnect** from the app drawer.
+5. Login: `employee@nexus.com` / `nexus123` (or tap **Demo credentials — tap to fill**).
 
 ---
 
