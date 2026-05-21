@@ -1,0 +1,160 @@
+================================================================================
+NEXUSCONNECT MOBILE — AI WORKFLOW DOCUMENTATION
+First 3 prompts and AI responses (Cursor / Auto)
+================================================================================
+
+--------------------------------------------------------------------------------
+PROMPT 1 — Architecture & design (planning phase)
+--------------------------------------------------------------------------------
+
+USER PROMPT:
+------------
+You are a senior React Native architect. Design a mobile app for a Corporate 
+Intranet called "NexusConnect" using Expo.
+
+Users: Employees only (limited features)
+Auth: employee@nexus.com / password: nexus123
+
+SCREENS NEEDED:
+1. Splash + Login
+2. Home — leadership message, latest announcements, upcoming event, XP points
+3. People — search employees, tap to view profile
+4. Recognition — feed + post appreciation (tag colleague + message + badge)
+5. Profile/More — my XP, badge, quick links, logout
+
+Give me:
+- Full folder structure
+- Navigation map (bottom tabs + stack)
+- Complete seed data (10 employees, announcements, recognition posts)
+- Tech stack: Expo + React Navigation + Zustand + NativeWind
+- Color system: navy #0F172A, teal #0EA5E9, amber #F59E0B
+- Component list for each screen
+
+
+AI RESPONSE (summary):
+--------------------
+Delivered a full architecture document without writing code yet:
+
+• Tech stack table: Expo SDK 52+, NativeWind v4, React Navigation v7, Zustand,
+  FlashList, expo-secure-store, Lucide icons.
+
+• Color system with tokens (navy / teal / amber) and usage rules.
+
+• Complete folder tree under src/ (screens, components, store, data/seed, hooks).
+
+• Mermaid navigation map: Auth stack (Splash → Login) → Main tabs (Home, People,
+  Recognition, More) with nested stacks for People profiles and Recognition post.
+
+• TypeScript route param lists for all navigators.
+
+• Full seed data: 10 employees, badges, leadership message, 5 announcements,
+  upcoming event, 8 recognition posts, demo credentials.
+
+• Zustand store responsibilities (auth, user, recognition).
+
+• Per-screen component breakdown tables.
+
+• Recommended implementation order (Expo init → seed → auth → tabs → screens).
+
+• Offered to scaffold the project in the empty workspace on request.
+
+
+--------------------------------------------------------------------------------
+PROMPT 2 — Full implementation (build phase)
+--------------------------------------------------------------------------------
+
+USER PROMPT:
+------------
+Build the complete React Native Expo app for NexusConnect mobile based on this 
+architecture: [full architecture spec pasted]
+
+Give me complete copy-paste ready code in this order:
+1. package.json
+2. app.json
+3. src/data/seed.js
+4. src/store/authStore.js
+5. App.js
+6–13. All screens
+14. src/components/
+
+RULES:
+- No placeholder comments — full working code every file
+- NativeWind for all styling
+- Lucide React Native for icons
+- Smooth navigation transitions
+- All data from seed.js only, no API calls
+
+
+AI RESPONSE (summary):
+--------------------
+Scaffolded the entire project manually (workspace folder name blocked create-expo-app).
+
+Created / updated:
+• package.json, app.json, babel.config.js, metro.config.js, tailwind.config.js,
+  global.css, index.js, App.js, assets.
+
+• src/data/seed.js — all employees, announcements, recognition, badges, helpers.
+
+• src/store/authStore.js — login/logout, SecureStore session, recognition feed.
+
+• Navigation: Root stack (Splash, Login, Main) + 4 tab stacks.
+
+• 8 screens: Splash, Login, Home, People, PeopleProfile, Recognition,
+  PostRecognition, Profile.
+
+• 14+ shared components (Input, Card, Avatar, home/people/recognition widgets).
+
+• Installed dependencies, fixed NativeWind/babel for Expo 52, verified bundle export.
+
+• README with run instructions and demo login.
+
+
+--------------------------------------------------------------------------------
+PROMPT 3 — Review, polish & fix UX (iteration phase)
+--------------------------------------------------------------------------------
+
+USER PROMPT:
+------------
+Review the NexusConnect React Native app. Fix and improve:
+
+1. All screens responsive on 375px and 414px widths
+2. Add loading skeleton on People list and Recognition feed
+3. Add toast when recognition is posted ("🎉 Recognition sent! +10 XP")
+4. Add empty state UI on all list screens
+5. Fix any navigation errors or missing imports
+6. Make bottom tab bar look polished with active/inactive icon states
+7. Add subtle fade-in animation on screen load
+
+Give only changed/new files.
+
+
+AI RESPONSE (summary):
+--------------------
+Iterated on UX and stability with targeted file changes only:
+
+NEW:
+• src/hooks/useResponsive.js — padding/type scale for 375px vs 414px.
+• src/components/FadeInView.js — fade + slide on mount.
+• src/components/Skeleton.js — People + Recognition list skeletons.
+• src/components/ToastProvider.js + useToast().
+• src/components/TabBarIcon.js — active pill + filled Heart icon.
+• src/components/ScreenHeader.js.
+
+CHANGED:
+• App.js — ToastProvider, polished tab bar styling.
+• Card.js — richer EmptyState with optional action.
+• PeopleScreen, RecognitionScreen — skeletons, fade-in, empty states.
+• PostRecognitionScreen — toast instead of Alert on success.
+• HomeScreen, ProfileScreen, LoginScreen, SplashScreen — responsive layout.
+• RecognitionPostCard, ScreenWrapper, etc.
+
+Verified Android bundle export after babel fix (removed worklets plugin conflict).
+
+
+================================================================================
+END OF FIRST 3 PROMPTS — Subsequent prompts extended the app further:
+  • Android / Expo Go setup help
+  • Terminal error fixes (SafeAreaProvider, SDK mismatch, PostRecognition View import)
+  • Login keyboard / @ symbol fixes
+  • Notifications, Announcement Detail, enhanced Splash screens
+================================================================================

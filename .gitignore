@@ -1,0 +1,18 @@
+node_modules/
+.expo/
+dist/
+.vercel/
+# Keep submission APK in releases/ — uncomment next line to ignore all APKs
+# releases/*.apk
+*.aab
+
+npm-debug.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+.env
+.DS_Store
