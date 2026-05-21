@@ -55,6 +55,20 @@ More detail: see **`releases/README.md`**.
 
 ---
 
+## Push to GitHub
+
+Code is committed locally. Create a repo on GitHub, then run (replace `YOUR_USERNAME`):
+
+```bash
+cd "d:\NexusConnect mobile -app"
+git remote add origin https://github.com/YOUR_USERNAME/nexusconnect.git
+git push -u origin main
+```
+
+**Note:** `releases/NexusConnect.apk` is ~79 MB. GitHub allows files under 100 MB; upload may take several minutes. If push fails, use [Git LFS](https://git-lfs.github.com/) or share the APK via Google Drive and link it in `releases/README.md`.
+
+---
+
 ## Quick start (developers — Expo Go)
 
 ```bash
